@@ -2,9 +2,6 @@ import pandas
 import streamlit
 import requests
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
-
 streamlit.title('My Parents New Healthy Diner')
 streamlit.header('Breakfast Menu')
 
@@ -25,3 +22,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # After pulling the data into a pandas dataframe called my_fruit_list, we will ask the streamlit library to display it on the page by typing:
 
 streamlit.dataframe(fruits_to_show)
+
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
